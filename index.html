@@ -151,7 +151,8 @@
         }
 
 
-        aaa=neb.api.call(from, dappContactAddress, value, nonce, gas_price, gas_limit, contract).then(function (resp) {
+        aaa=neb.api.call(from, dappContactAddress, value, nonce, gas_price, gas_limit, contract)
+		number=aaa.then(function (resp) {
             var result = resp.result;
             
             console.log(result);
@@ -164,7 +165,7 @@
 			console.log("error :" + err.message);
 			
 		})
-		number=aaa.value;
+		
 		console.log(number);
     function get(){
 		console.log("111");
