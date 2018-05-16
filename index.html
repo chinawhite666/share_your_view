@@ -102,7 +102,8 @@
 		<h1>没错一周就一个问题，在快餐式认知的时代，我们需要深入。分享完你的看法，不要关闭，也看看别人的想法</h1>
 		<hr>
 		<hr>
-    	<p>在币圈如何不被割韭菜？？？？</p>
+		<p>在币圈如何不被割韭菜？？？？</p>
+		<p id="n"></p>
     	<textarea id="text" cols="60" rows="20" maxlength="200" class="text opa"></textarea><br>
     	<input type="button" value="发表" id="ipt">
     	<div id="txt" >
@@ -152,20 +153,23 @@
 
 
         aaa=neb.api.call(from, dappContactAddress, value, nonce, gas_price, gas_limit, contract)
-		number=aaa.then(function (resp) {
+		aaa.then(function (resp) {
             var result = resp.result;
             
             console.log(result);
             number = JSON.parse(result);
 			console.log(typeof(result));
-			return number;
+			var n = document.getElementById("n");
+			n.innerHTML=number;
             
 
         }).catch(function (err) {
 			console.log("error :" + err.message);
 			
 		})
-		
+
+		var nn=document.getElementById("n");
+		number=parseInt(nn.innerHTML);
 		console.log(number);
     function get(){
 		console.log("111");
