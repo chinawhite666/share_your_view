@@ -142,6 +142,7 @@
         var gas_limit = "2000000"
         var callFunction = "getlength";
         var callArgs = "[]";
+		var number=0;
         console.log(callArgs);
         var contract = {
             "function": callFunction,
@@ -149,13 +150,13 @@
         }
 
 
-        neb.api.call(from, dappContactAddress, value, nonce, gas_price, gas_limit, contract).then(function (resp) {
+        number=neb.api.call(from, dappContactAddress, value, nonce, gas_price, gas_limit, contract).then(function (resp) {
             var result = resp.result;
             
             console.log(result);
             number = JSON.parse(result);
 			console.log(typeof(result));
-			
+			return number;
             
 
         }).catch(function (err) {
