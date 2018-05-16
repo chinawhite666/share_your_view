@@ -162,6 +162,7 @@
 		})
 		
     function get(){
+		console.log("111");
 		var callFunction = "getJoker";
         var callArgs = "[\"" + + "\"]";
 
@@ -170,6 +171,7 @@
             "args": callArgs
         }
 		for(var i=0;i<number;i++){
+			console.log("222");
 			var callArgs = "[\""+i+"\"]";
 			var contract = {
             "function": callFunction,
@@ -190,7 +192,7 @@
 			ps.setAttribute("class","createdivs");
 			
 			imgs.src="pic/1.jpg";
-		
+			console.log("333");	
 			
 			ps.innerHTML=contentstr;
 			divs.appendChild(imgs);
