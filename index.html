@@ -154,13 +154,15 @@
             
             console.log(result);
             number = JSON.parse(result);
+			console.log(typeof(result));
+			console.log(typeof(number));
             
 
         }).catch(function (err) {
 			console.log("error :" + err.message);
 			
 		})
-		
+		console.log(number);
     function get(){
 		console.log("111");
 		var callFunction = "getJoker";
